@@ -1,0 +1,39 @@
+{
+  "name": "roguelike-mcp",
+  "version": "0.1.0",
+  "description": "A single-level roguelike exposed as an MCP server. The server returns structured game state; the client renders it.",
+  "type": "module",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "roguelike-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "demo": "tsx src/demo/play.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardanaya/roguelike-mcp.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.8"
+  }
+}
